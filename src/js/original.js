@@ -1,4 +1,4 @@
-var forecastIOKey = "56122e82038a99491f6678b47707bf78";
+var forecastIOKey = "56122e82038a99491f6678b47707bf79";
 
 var icons = [
   'clear-day',
