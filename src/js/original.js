@@ -1,3 +1,29 @@
+var forecastIOKey = "56122e82038a99491f6678b47707bf78";
+
+var icons = [
+  'clear-day',
+  'clear-night',
+  'cloudy',
+  'fog',
+  'partly-cloudy-day',
+  'partly-cloudy-night',
+  'rain',
+  'sleet',
+  'snow',
+  'wind',
+  'error'
+];
+
+
+function getAndShowWeather ( ) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    // position.coords.latitude, position.coords.longitude
+    getCurrentWeather(position.coords.longitude, position.coords.latitude);
+  });
+
+  setTimeout(getAndShowWeather, 300000);
+}
+
 function getCurrentWeather (lon, lat) {
   var req = new XMLHttpRequest();
     req.open('GET',"https://api.forecast.io/forecast/" + forecastIOKey + "/" + 50.087015 + "," + 14.502838, true);
