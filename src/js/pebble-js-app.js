@@ -57,7 +57,7 @@ function getCurrentWeather (lon, lat) {
     req.send(null);
 }
 
-function FtoC (f) {
+function FtoC (f) { 
   return (f - 32) * 5 / 9;
 }
 
